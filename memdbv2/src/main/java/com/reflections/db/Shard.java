@@ -18,7 +18,7 @@ public class Shard {
         }
     }
 
-    public String read(String key, Transaction txn) {
+    public String read(String key) {
         this.lock.readLock().lock();
         try {
             return this.data.get(key);

@@ -20,9 +20,9 @@ public class Table {
         index.add(key, shard);
     }
 
-    public String read(String key, Transaction txn) {
+    public String read(String key) {
         Shard shard = this.getShard(key);
-        return shard.read(key, txn);
+        return shard.read(key);
     }
 
     public void update(String key, String value, Transaction txn) {
